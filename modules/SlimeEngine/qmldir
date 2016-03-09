@@ -1,0 +1,10 @@
+# v0.1
+module SlimeEngine
+WebView 0.1 0.1/WebView.qml
+Profile 0.1 0.1/Profile.qml
+CertificateError 0.1 0.1/CertificateError.js
+LoadStatus 0.1 0.1/LoadStatus.js
+NewViewRequest 0.1 0.1/NewViewRequest.js
+Feature 0.1 0.1/Feature.js
+MessageLevel 0.1 0.1/MessageLevel.js
+singleton Slime 0.1 0.1/Slime.qml
