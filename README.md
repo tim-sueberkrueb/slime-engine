@@ -5,7 +5,7 @@ A slimy wrapper to support both QtWebEngine and Oxide through one unified QML AP
 
 ## Dependencies
 * Qt >= 5.4 (Oxide) or Qt >= 5.6 (QtWebEngine)
-* Oxide >= 1.9 or QtWebEngine >= 1.1
+* Oxide >= 1.9 or QtWebEngine >= 1.2
 
 ## Installation on Linux
 ```
