@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import QtWebEngine 1.1
+import QtWebEngine 1.2
 import "../base"
 import "../../CertificateError.js" as CertificateError
 import "../../LoadStatus.js" as LoadStatus
@@ -152,6 +152,10 @@ Holding {
                     break;
             }
             pipe.featureRequested(Requests.getFeatureRequest(webview, securityOrigin, f, feature));
+        }
+
+        onWindowCloseRequested: {
+            pipe.closeRequested();
         }
 
         function finishCreation() {

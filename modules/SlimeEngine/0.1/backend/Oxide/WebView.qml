@@ -187,6 +187,10 @@ Holding {
             pipe.profile.downloadRequested(Requests.getDownloadRequest(pipe.profile, request, downloadComponent, request.mimeType))
         }
 
+        onCloseRequested: {
+            pipe.closeRequested();
+        }
+
         function finishCreation() {
             webview.url = pipe ? pipe.url: Qt.resolvedUrl("");
             pipe.urlChanged.connect(function(){

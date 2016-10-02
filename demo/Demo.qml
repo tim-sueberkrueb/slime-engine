@@ -126,6 +126,10 @@ ApplicationWindow {
                     console.log("Feature requested:", request.featureName, request.origin)
                     request.accept();
                 }
+
+                onCloseRequested: {
+                    console.log("Close requested");
+                }
             }
 
             WebView {
@@ -137,6 +141,10 @@ ApplicationWindow {
                 onFeatureRequested: {
                     console.log("Feature requested:", request.featureName, request.origin)
                     request.accept();
+                }
+
+                onCloseRequested: {
+                    console.log("Close requested");
                 }
             }
         }

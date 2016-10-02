@@ -78,6 +78,7 @@ Element {
     signal featureRequested(var request)
     signal consoleMessage(string level, string message, int lineNumber, string sourceId)
     signal certificateError(var error)
+    signal closeRequested()
 
     Pipe {
         id: pipe
@@ -128,6 +129,11 @@ Element {
         signal certificateError(var error)
         onCertificateError: {
             element.certificateError(error);
+        }
+
+        signal closeRequested()
+        onCloseRequested: {
+            element.closeRequested();
         }
 
     }
