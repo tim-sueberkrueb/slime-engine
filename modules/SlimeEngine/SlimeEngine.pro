@@ -1,7 +1,6 @@
 TEMPLATE = subdirs
 
 deployment.files += qmldir \
-                    0.1 \
                     0.2
 
 deployment.path = $$[QT_INSTALL_QML]/SlimeEngine

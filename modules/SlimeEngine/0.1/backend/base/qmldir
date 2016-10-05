@@ -1,4 +1,0 @@
-module base
-singleton Requests 0.1 Requests.qml
-singleton Events 0.1 Events.qml
-singleton Errors 0.1 Errors.qml

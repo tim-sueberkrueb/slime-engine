@@ -1,15 +1,5 @@
 module SlimeEngine
 
-# v0.1
-WebView 0.1 0.1/WebView.qml
-Profile 0.1 0.1/Profile.qml
-CertificateError 0.1 0.1/CertificateError.js
-LoadStatus 0.1 0.1/LoadStatus.js
-NewViewRequest 0.1 0.1/NewViewRequest.js
-Feature 0.1 0.1/Feature.js
-MessageLevel 0.1 0.1/MessageLevel.js
-Slime 0.1 0.1/Slime.js
-
 # v0.2
 WebView 0.2 0.2/wrap/WebView.qml
 WebProfile 0.2 0.2/wrap/WebProfile.qml
