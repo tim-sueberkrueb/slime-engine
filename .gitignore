@@ -36,3 +36,9 @@ Makefile*
 # QtCtreator CMake
 CMakeLists.txt.user
 
+# Oxide and QtWebEngine files
+GPUCache/
+QuotaManager
+QuotaManager-journal
+TransportSecurity
+databases/

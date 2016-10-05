@@ -1,0 +1,14 @@
+module components
+
+# v0.2
+Engine 0.2 Engine.qml
+Wrap 0.2 Wrap.qml
+Init 0.2 Init.qml
+singleton Slime 0.2 Slime.qml
+
+Feature 0.2 Feature.js
+CertificateError 0.2 CertificateError.js
+LoadStatus 0.2 LoadStatus.js
+MessageLevel 0.2 MessageLevel.js
+NewViewRequest 0.2 NewViewRequest.js
+WebEngine 0.2 WebEngine.js

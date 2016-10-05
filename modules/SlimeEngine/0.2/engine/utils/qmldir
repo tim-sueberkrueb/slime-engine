@@ -1,0 +1,8 @@
+module utils
+
+# v0.2
+
+singleton Errors 0.2 Errors.qml
+singleton Events 0.2 Events.qml
+singleton Requests 0.2 Requests.qml
+

@@ -1,20 +1,64 @@
 # Slime Engine
-A slimy wrapper to support both QtWebEngine and Oxide through one unified QML API.
+A QML webview wrapper to support both QtWebEngine and Oxide through one simple QML API.
 
 # Installation
 
 ## Dependencies
-* Qt >= 5.4 (Oxide) or Qt >= 5.6 (QtWebEngine)
-* Oxide >= 1.9 or QtWebEngine >= 1.2
+* Qt >= 5.5 (QtQuick >= 2.5)
 
-## Installation on Linux
+Either ...
+* QtWebEngine >= 1.2
+
+... or ...
+* Oxide >= 1.15 and Ubuntu.DownloadManager >= 0.1
+
+## Build and Install
 ```
     git clone https://github.com/tim-sueberkrueb/slime-engine
     cd slime-engine
-    qmake
-    make
+    qmake && make
     sudo make install
 ```
+
+## Usage
+
+Try the demo:
+```
+    cd slime-engine
+    qmlscene demo/Demo.qml
+```
+
+Minimal example:
+```qml
+import QtQuick 2.5
+import SlimeEngine 0.2
+
+WebView {
+    engine: Slime.detectEngine()
+    // engine: WebEngine.Oxide
+    // engine: WebEngine.QtWebEngine
+    url: "http://github.com"
+}
+
+```
+Remember to call `QtWebEngine::initialize();` from C++ when you're using QtWebEngine.
+
+# Releases
+* v0.2
+    * Current development release
+    * Code cleanup and removed a lot of boilerplate code
+    * Bug fixes
+    * API changes:
+        * `NewViewRequest.openIn()` and `WebView.openRequest` are no longer supported. Set `WebView.request` on creation of a new view instead.
+        * `Slime.backend` was renamed to `Slime.engineName`
+        * `Slime.backendDetected` was renamed to `Slime.engineDetected`
+        * `Slime.detectBackend()` was renamed to `Slime.detectEngine()`
+    * Slime no longer automatically detects the webengine
+* v0.1
+    * Initial alpha preview
+    * There are some known bugs (fixed in v0.2) - do not use in production
+
+Note: There is no stable realease, yet!
 
 ## Copyright and License
 (C) Copyright 2016 by Tim Süberkrüb
