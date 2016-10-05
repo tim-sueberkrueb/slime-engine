@@ -14,18 +14,18 @@ Either ...
 
 ## Build and Install
 ```
-    git clone https://github.com/tim-sueberkrueb/slime-engine
-    cd slime-engine
-    qmake && make
-    sudo make install
+git clone https://github.com/tim-sueberkrueb/slime-engine
+cd slime-engine
+qmake && make
+sudo make install
 ```
 
 ## Usage
 
 Try the demo:
 ```
-    cd slime-engine
-    qmlscene demo/Demo.qml
+cd slime-engine
+qmlscene demo/Demo.qml
 ```
 
 Minimal example:
