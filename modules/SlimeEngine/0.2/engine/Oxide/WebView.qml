@@ -34,6 +34,7 @@ EngineElement {
     readonly property url icon: webview.icon
     readonly property bool isFullScreen: webview.fullscreen
     readonly property int loadProgress: webview.loadProgress
+    property int loadStatus: -1
     readonly property string title: webview.title
 
     property Component downloadComponent: Component {
@@ -112,6 +113,10 @@ EngineElement {
 
         onLoadEvent: {
             var status;
+            if (event.type === LoadEvent.TypeCommitted) {
+                return;     // We don't handle TypeCommitted since that is not supported by QtWebEngine.
+            }
+
             switch(event.type) {
             case LoadEvent.TypeStarted:
                 status = LoadStatus.LoadStarted;
@@ -128,6 +133,7 @@ EngineElement {
             default:
                 status = -1;
             }
+            loadStatus = status;
             if (status !== -1)
                 w.loadingChanged(Events.getLoadingChangedEvent(event.url, status, event.isError, event.errorCode, event.errorString));
         }

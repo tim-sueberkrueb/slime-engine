@@ -35,6 +35,7 @@ EngineElement {
     readonly property url icon: webview.icon
     readonly property bool isFullScreen: webview.isFullScreen
     readonly property int loadProgress: webview.loadProgress
+    property int loadStatus: -1
     readonly property string title: webview.title
 
     function runJavaScript(script, callback){
@@ -96,6 +97,7 @@ EngineElement {
                     status = LoadStatus.LoadFailed;
                     break;
             }
+            loadStatus = status;
             if (w && active)    // Known issue: the first loading event (LoadStarted) might get lost
                 w.loadingChanged(Events.getLoadingChangedEvent(loadRequest.url, status, loadRequest.errorCode != 0, loadRequest.errorCode, loadRequest.errorString));
         }

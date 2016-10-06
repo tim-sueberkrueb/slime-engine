@@ -72,6 +72,7 @@ Wrap {
     readonly property url icon: __engineInstance.icon
     readonly property bool isFullScreen: __engineInstance.isFullScreen
     readonly property int loadProgress: __engineInstance.loadProgress
+    readonly property int loadStatus: __engineInstance.loadStatus
     readonly property string title: __engineInstance.title
 
     function findText(text, backwards, caseSensitive, callback) {
