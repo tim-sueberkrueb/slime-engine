@@ -22,7 +22,7 @@ import QtWebEngine 1.2
 QtObject {
     property var __downloadItem
 
-    property real progress: __downloadItem.receivedBytes/__downloadItem.totalBytes
+    property real progress: (__downloadItem.receivedBytes/__downloadItem.totalBytes) * 100
     property string path: __downloadItem.path
     property string mimeType: __downloadItem.mimeType
 
