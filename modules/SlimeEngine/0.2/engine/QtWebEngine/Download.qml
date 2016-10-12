@@ -39,9 +39,9 @@ QtObject {
 
     Component.onCompleted: {
         __downloadItem.stateChanged.connect(function(){
-            if (state == __downloadItem.DownloadCompleted)
+            if (__downloadItem.state == WebEngineDownloadItem.DownloadCompleted)
                 finished();
-            else if (state == __downloadItem.DownloadInterrupted)
+            else if (__downloadItem.state == WebEngineDownloadItem.DownloadInterrupted)
                 failed();
         });
     }
