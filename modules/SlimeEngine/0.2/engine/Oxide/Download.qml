@@ -24,7 +24,7 @@ QtObject {
     id: downloadItem
     property var __request
 
-    property real progress: __single.progress/100
+    property real progress: __single.progress
     property string path: __request.suggestedFilename
     property string mimeType: __request.mimeType
 
