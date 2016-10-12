@@ -101,7 +101,6 @@ QtObject {
             property string mimeType
 
             function accept() {
-                console.log(__engine)
                 var download;
                 if (__engine == "QtWebEngine") {
                     download = __component.createObject(null, {"__downloadItem": __request});
