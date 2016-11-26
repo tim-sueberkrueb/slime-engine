@@ -54,4 +54,10 @@ Item {
         __engineInstance.anchors.fill = wrap;
         return __engineInstance;
     }
+
+    Component.onCompleted: {
+        __init.begin();
+        __init.script();
+        __init.end();
+    }
 }

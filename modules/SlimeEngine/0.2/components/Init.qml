@@ -27,10 +27,4 @@ QtObject {
 
     signal begin()
     signal end()
-
-    Component.onCompleted: {
-        begin();
-        script();
-        end();
-    }
 }
