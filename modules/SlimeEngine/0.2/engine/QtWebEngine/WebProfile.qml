@@ -27,6 +27,7 @@ EngineElement {
 
     property var profile: WebEngineProfile {
         offTheRecord: w.incognito
+        storageName: "default"
 
         onDownloadRequested: {
             w.downloadRequested(Requests.getDownloadRequest(profile, download, downloadComponent, download.mimeType, engineName));
